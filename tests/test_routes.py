@@ -141,3 +141,50 @@ class TestAccountService(TestCase):
         resp = self.client.get(f"{BASE_URL}/0")
         self.assertEqual(resp.status_code, status.HTTP_404_NOT_FOUND)
 
+    # def test_list_accounts(self):
+    #     response = self.app.get('/accounts')
+    #     self.assertEqual(response.status_code, 200)
+    #     data = response.get_json()
+    #     self.assertIsInstance(data, list)
+
+    # def test_read_account_success(self):
+    #     # Assuming Account with ID 1 exists
+    #     response = self.app.get('/accounts/1')
+    #     self.assertEqual(response.status_code, 200)
+    #     data = response.get_json()
+    #     self.assertIn('id', data)
+    #     self.assertEqual(data['id'], 1)
+
+    # def test_read_account_not_found(self):
+    #     response = self.app.get('/accounts/9999')  # Assuming ID 9999 does not exist
+    #     self.assertEqual(response.status_code, 404)
+
+    # def test_update_account_success(self):
+    #     # Assuming Account with ID 1 exists
+    #     update_data = {
+    #         "name": "New Name",
+    #         "address": "New Address"
+    #     }
+    #     response = self.app.put('/accounts/1', json=update_data)
+    #     self.assertEqual(response.status_code, 200)
+    #     data = response.get_json()
+    #     self.assertEqual(data['name'], "New Name")
+    #     self.assertEqual(data['address'], "New Address")
+
+    # def test_update_account_not_found(self):
+    #     update_data = {
+    #         "name": "New Name",
+    #         "address": "New Address"
+    #     }
+    #     response = self.app.put('/accounts/9999', json=update_data)  # Assuming ID 9999 does not exist
+    #     self.assertEqual(response.status_code, 404)
+
+    # def test_delete_account_success(self):
+    #     # Assuming Account with ID 1 exists
+    #     response = self.app.delete('/accounts/1')
+    #     self.assertEqual(response.status_code, 204)
+
+    # def test_delete_account_not_found(self):
+    #     response = self.app.delete('/accounts/9999')  # Assuming ID 9999 does not exist
+    #     self.assertEqual(response.status_code, 204)
+
